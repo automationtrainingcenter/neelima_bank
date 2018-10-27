@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="grid suite" parallel="tests" thread-count="2">
+	<parameter name="url" value="http://srssprojects.in"></parameter>
+	
+	<test name="surya node">
+		<parameter name="brName" value="chrome"></parameter>
+		<parameter name="nodeUrl" value="http://192.168.43.141:37455/wd/hub"></parameter>
+		<parameter name="os" value="windows"></parameter>
+		<groups>
+			<run> 
+				<include name="invalid"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="srssprojects.keximbank.GridExecution">
+			</class>
+		</classes>
+	</test>
+	
+	<test name="neelima node">
+		<parameter name="brName" value="chrome"></parameter>
+		<parameter name="nodeUrl" value="http://192.168.43.188:32397/wd/hub"></parameter>
+		<parameter name="os" value="windows"></parameter>
+		<groups>
+			<run>
+				<include name="reset"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="srssprojects.keximbank.GridExecution">
+			</class>
+		</classes>
+	</test>
+</suite>
