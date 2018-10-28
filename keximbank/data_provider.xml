@@ -5,8 +5,8 @@
 		<classes>
 			<class name="srssprojects.keximbank.BasicExecution">
 				<methods>
-					<include name="branchCreationWithMultipleData"></include>
-					
+					<include name="branchCreationWithDP"></include>
+					<include name="roleCreationWithDP"></include>
 				</methods>
 			</class>
 		</classes>

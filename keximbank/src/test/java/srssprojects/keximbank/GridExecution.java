@@ -14,6 +14,8 @@ public class GridExecution extends TestExecution{
 		adminHomePageObj = PageFactory.initElements(driver, AdminHomePage.class);
 		branchDetailsPageObj = PageFactory.initElements(driver, BranchDetailsPage.class);
 		branchCreationPageObj = PageFactory.initElements(driver, BranchCreationPage.class);
+		roleDetailsPage = PageFactory.initElements(driver, RoleDetailsPage.class);
+		roleCreationPage = PageFactory.initElements(driver, RoleCreationPage.class);
 	}
 
 	@AfterClass(groups = { "branch", "create", "valid", "invalid", "reset", "cancel" })

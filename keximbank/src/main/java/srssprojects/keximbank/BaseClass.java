@@ -17,6 +17,8 @@ public class BaseClass {
 	AdminHomePage adminHomePageObj;
 	BranchDetailsPage branchDetailsPageObj;
 	BranchCreationPage branchCreationPageObj;
+	RoleDetailsPage roleDetailsPage;
+	RoleCreationPage roleCreationPage;
 	WebDriver driver;
 	
 	//launch browser
@@ -78,6 +80,13 @@ public class BaseClass {
 		branchCreationPageObj.selectCountry(country);
 		branchCreationPageObj.selectState(state);
 		branchCreationPageObj.selectCity(city);
+	}
+	
+	public void fillRoleCreationForm(String roleName, String roleDescription, String roleType) {
+		// call fill and select methods of RoleCreationPage
+		roleCreationPage.fillRoleName(roleName);
+		roleCreationPage.fillRoleDescription(roleDescription);
+		roleCreationPage.selectRoleType(roleType);
 	}
 	
 	
